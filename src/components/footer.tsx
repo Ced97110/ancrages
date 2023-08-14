@@ -156,7 +156,7 @@ const Contact = () => {
       return;
     }
 
-  }, []);
+  }, [prefersReducedMotion]);
 
     const socialMedia = [
         {

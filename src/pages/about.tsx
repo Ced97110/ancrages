@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components';
-
+import Image from 'next/image';
 
 const StyledAbout = styled.section`
   
@@ -116,7 +116,13 @@ const StyledAbout = styled.section`
           <h3 className="section-subheading">Fondatrice du cabinet RH Ancrages.</h3>
           <span className="divider"></span>
           <div className="about-wrapper">
-            <img className="headshot" src="/murielle.jpg" alt="headshot" />
+            <Image
+                src="/murielle.jpg"
+                alt="Headshot"
+                className="headshot"
+                width={320}
+                height={320} // Adjust the height as needed
+              />
             <div className="about-text-wrapper">
              <h5>Education :</h5>
              <ul className='fancy-list' >
@@ -124,12 +130,12 @@ const StyledAbout = styled.section`
              </ul>
              <h5>Experience :</h5>
              <ul className='fancy-list'>
-               <li><p>Forte d’une expérience de plus de 20 ans de responsable des ressources humaines dans de grands groupes établis sur les Antilles-Guyane (Groupe HUYGHUES- DESPOINTES, Groupe SISB (Match, Cora),Groupe HO HIO HEN, Banque LCL (Le Crédit Lyonnais)</p></li>
+               <li><p>Forte d&rsquo;une expérience de plus de 20 ans de responsable des ressources humaines dans de grands groupes établis sur les Antilles-Guyane (Groupe HUYGHUES- DESPOINTES, Groupe SISB (Match, Cora),Groupe HO HIO HEN, Banque LCL (Le Crédit Lyonnais)</p></li>
              </ul>
              <h5>Quelques éléments de son expérience récente :</h5>
              <ul className='fancy-list'>
               <li><p>Groupe LCL de juillet 2012 à mai 2021.</p></li>
-              <li><p>Préparation, organisation des travaux RH d'intégration</p></li>
+              <li><p>Préparation, organisation des travaux RH d&rsquo;intégration</p></li>
               <li><p>Négociation sociale, PDV, reclassements, réorganisation des fonctions support...</p></li>
               <li><p>Accompagnement du changement, accompagnement des managers...</p></li>
             </ul>

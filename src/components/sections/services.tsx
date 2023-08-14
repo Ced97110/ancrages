@@ -288,7 +288,7 @@ const Featured = () => {
       return;
     }
 
-  }, []);
+  }, [prefersReducedMotion]);
 
 
 const data = [
