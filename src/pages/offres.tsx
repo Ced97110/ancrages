@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components';
 import { isTemplateMiddle } from 'typescript';
-
+import Image from 'next/image';
 
 
 
@@ -239,8 +239,6 @@ const StyledOfferBlock = styled.li`
 
 
 const StyledBackground = styled.div`
-   width: 100%;
-    height: 100%;
     min-height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -250,7 +248,7 @@ const StyledBackground = styled.div`
     overflow: hidden;
 
 
-  background-image: url('./root.jpg');
+   
   
   @media ${props => props.theme.bp.desktopS} {
     background-image: url('./experience-lg.jpg');
@@ -311,7 +309,8 @@ export const Offres = () => {
       
   return (
     <StyledOfferSection>
-        <StyledBackground/>
+      <Image src="/root.jpg" className='bg' fill={true}  alt="tree shot" />
+      
          <div className="overlay-wrapper">
            <div className='center'>
               <h1 className="section-heading">Nos Offres RH</h1>

@@ -44,6 +44,7 @@ const Layout = ({ children } : LayoutProps) => {
           <div id='content'>
              {children}
           </div>
+          <Footer/>
        </StyledContent>
         )}
     </ThemeProvider>

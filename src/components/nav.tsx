@@ -41,7 +41,7 @@ const StyledHeader = styled.header<StyledHeaderProps>`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: rgba(152, 33, 118, 0.75);
+        background-color: rgba(152, 33, 118, 0.85);
         box-shadow: 0 10px 30px -10px var(--navy-shadow);
       `};
 
