@@ -18,7 +18,7 @@ export const navLinks = [
   },
   {
     name: 'Nos Services',
-    url: '#features',
+    url: '#services',
   },
   {
     name: 'Nos Offres',

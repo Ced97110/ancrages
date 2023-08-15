@@ -231,6 +231,7 @@ const StyledProject = styled.li`
     grid-row: 1 / -1;
     position: relative;
     z-index: 1;
+  
 
     @media (max-width: 768px) {
       grid-column: 1 / -1;
@@ -241,7 +242,6 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--yellow);
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -277,7 +277,7 @@ const StyledProject = styled.li`
   }
 `;
 
-const ServicesIntro = () => {
+const Projects = () => {
   
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
@@ -312,7 +312,7 @@ const data = [
  
    
   return (
-    <section id="services">
+    <section id="projects">
       <div className='section-wrapper'>
         
 
@@ -334,13 +334,6 @@ const data = [
                         dangerouslySetInnerHTML={{__html:url.description}}
                       />
                           
-                      <div className="project-links">
-                      
-                          <a aria-label="Course Link" className="cta">
-                            En savoir plus
-                          </a>
-                      
-                      </div>
                     </div>
                   </div>
 
@@ -359,4 +352,4 @@ const data = [
   );
 };
 
-export default ServicesIntro;
+export default Projects;

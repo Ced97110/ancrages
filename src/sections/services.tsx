@@ -244,7 +244,7 @@ const StyledBackground = styled.div`
 
 
 
-const Features = () => {
+const Services = () => {
 
   const data = [
     {
@@ -280,7 +280,7 @@ const Features = () => {
   ];
 
     return (
-        <ServicesSection id='features'>
+        <ServicesSection id='services'>
             <StyledBackground/>
             <div className="overlay-wrapper">
               <div className="fade-in">
@@ -301,8 +301,8 @@ const Features = () => {
         </div>
       </div>
     </div>
-        </ServicesSection>
+   </ServicesSection>
     )
 }
 
-export default Features;
+export default Services;
