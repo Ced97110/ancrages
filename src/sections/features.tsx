@@ -237,21 +237,8 @@ const StyledBackground = styled.div`
   overflow: hidden;
   object-fit: cover; // Remove the single quotes
   left: 0;
-
-  background-image: url('./public/services-xl.jpg');
+  background-image: url('../root.jpg');
   
-  @media ${props => props.theme.bp.SM} {
-    background-image: url('./services-lg.jpg');
-  }
-  @media ${props => props.theme.bp.SM} { 
-    background-image: url('./services-md.jpg');
-  }
-  @media ${props => props.theme.bp.S660} {
-    background-image: url('./services-sm.jpg');
-  }
-  @media ${props => props.theme.bp.SM} {
-    background-image: url('./services-xs.jpg');
-  }
 `;
 
 

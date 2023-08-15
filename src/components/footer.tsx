@@ -171,7 +171,7 @@ const Contact = () => {
       <div className='inner'>
         <div className='logo'>
               <div className="logo-container">
-                  <Image src='/logo.png' quality={90} width={70} height={70}  alt='logo-home' />
+                  <Image src='/logo.png'  width={70} height={75}  alt='logo-home' />
               </div>
           </div>
           <ul className="nav-list">

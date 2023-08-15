@@ -20,7 +20,7 @@ const StyledHeader = styled.header<StyledHeaderProps>`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(152, 33, 118, 0.75);
+  background-color: var(--dark-mauve);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -41,7 +41,7 @@ const StyledHeader = styled.header<StyledHeaderProps>`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: rgba(152, 33, 118, 0.90);
+        background-color:  rgba(152, 33, 118, 0.90);
         box-shadow: 0 10px 30px -10px var(--navy-shadow);
       `};
 
@@ -179,7 +179,7 @@ const Nav = ({ isHome } : NavProps) => {
       {isHome ? (
         <Link href="/" aria-label="home">
           <div className="logo-container">
-            <Image src='/logo.png' quality={80} width={40} height={40}  priority={true} sizes="(max-width: 480px) 40px" alt='logo-home' />
+            <Image src='/logo.png'  width={55} height={55}  priority={true} sizes="(max-width: 480px) 40px" alt='logo-home' />
           </div>
         </Link>
       ) : (
