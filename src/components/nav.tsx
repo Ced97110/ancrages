@@ -41,7 +41,7 @@ const StyledHeader = styled.header<StyledHeaderProps>`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: rgba(152, 33, 118, 0.85);
+        background-color: rgba(152, 33, 118, 0.90);
         box-shadow: 0 10px 30px -10px var(--navy-shadow);
       `};
 
@@ -179,13 +179,13 @@ const Nav = ({ isHome } : NavProps) => {
       {isHome ? (
         <Link href="/" aria-label="home">
           <div className="logo-container">
-            <Image src='/logo.png' quality={80} width={70} height={70}  priority={true} sizes="(max-width: 480px) 40px" alt='logo-home' />
+            <Image src='/logo.png' quality={80} width={40} height={40}  priority={true} sizes="(max-width: 480px) 40px" alt='logo-home' />
           </div>
         </Link>
       ) : (
         <Link href="/" aria-label="home">
           <div className="logo-container">
-             <Image src='/logo.png'  width={70} height={70}  alt='logo-home' />
+             <Image src='/logo.png'  width={40} height={40}  alt='logo-home' />
           </div>
         </Link>
       )}
