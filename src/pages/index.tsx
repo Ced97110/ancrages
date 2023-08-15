@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Hero,  ServicesIntro, Brand, Features } from '@sections'
+import Offres from '../sections/offres'
+import About from '../sections/about'
+import Contact from '../components/footer'
 
 
 
@@ -23,6 +26,9 @@ export default function Home() {
      <Brand/>
      <ServicesIntro/>
      <Features/>
+     <Offres/>
+     <About/>
+     <Contact/>
      
   
 

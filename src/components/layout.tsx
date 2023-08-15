@@ -17,6 +17,7 @@ const StyledContent = styled.div`
 
 interface LayoutProps {
   children: ReactNode;
+  
 }
 
 const Layout = ({ children } : LayoutProps) => {
@@ -29,7 +30,19 @@ const Layout = ({ children } : LayoutProps) => {
     if (isLoading) {
       return;
     }
-  }, [isLoading]);
+
+    if (router.asPath.includes('#')) {
+      const id = router.asPath.split('#')[1]; // location.hash without the '#'
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView();
+          el.focus();
+        }
+      }, 0);
+    }
+
+  }, [isLoading, router.asPath]);
 
 
   return (

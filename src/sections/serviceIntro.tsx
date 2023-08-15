@@ -312,7 +312,7 @@ const data = [
  
    
   return (
-    <section id="projects">
+    <section id="services">
       <div className='section-wrapper'>
         
 

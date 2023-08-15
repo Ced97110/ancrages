@@ -18,19 +18,19 @@ export const navLinks = [
   },
   {
     name: 'Nos Services',
-    url: '/services',
+    url: '#features',
   },
   {
     name: 'Nos Offres',
-    url: '/offres',
+    url: '#offers',
   },
   {
     name: 'Qui sommes nous ?',
-    url: '/about',
+    url: '#about',
   },
   {
     name: 'Contact',
-    url: '/contact',
+    url: '#contact',
   },
 ];
 

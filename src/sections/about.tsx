@@ -108,7 +108,7 @@ const StyledAbout = styled.section`
 
 
   return (
-    <StyledAbout>
+    <StyledAbout id='about'>
       <div className="section-wrapper">
         <div className="fade-in">
           <h1 className="section-heading">Murielle Manchau</h1>

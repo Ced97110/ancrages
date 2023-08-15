@@ -89,7 +89,7 @@ const Hero = () => {
 
 
   return (
-    <StyledHeroSection id='hero-section'>
+    <StyledHeroSection id='hero'>
       <div className='bg' >
         <div className='overlay-wrapper'>
           {prefersReducedMotion ? (

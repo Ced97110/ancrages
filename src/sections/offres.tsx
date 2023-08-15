@@ -311,7 +311,7 @@ export const Offres = () => {
   
       
   return (
-    <StyledOfferSection>
+    <StyledOfferSection id='offers'>
     <div className="overlay-wrapper">
       <div className="center">
         <h1 className="section-heading">

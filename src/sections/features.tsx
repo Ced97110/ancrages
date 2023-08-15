@@ -280,7 +280,7 @@ const Features = () => {
   ];
 
     return (
-        <ServicesSection>
+        <ServicesSection id='features'>
             <StyledBackground/>
             <div className="overlay-wrapper">
               <div className="fade-in">
