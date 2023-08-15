@@ -257,7 +257,7 @@ const StyledBackground = styled.div`
 
 
 
-const Featured = () => {
+const Features = () => {
 
   const data = [
     {
@@ -318,4 +318,4 @@ const Featured = () => {
     )
 }
 
-export default Featured;
+export default Features;
