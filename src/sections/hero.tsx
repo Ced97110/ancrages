@@ -56,10 +56,10 @@ const StyledHeroSection = styled.section<{theme: DefaultTheme}>`
 `;
 
 
-const Hero: React.FC = () => {
+const Hero = () => {
   
   const [isMounted, setIsMounted] = useState(false);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLElement>(null);
   const theme = useTheme();
   const prefersReducedMotion = usePrefersReducedMotion();
 

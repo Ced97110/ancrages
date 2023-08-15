@@ -1,6 +1,6 @@
 import React, { useEffect, useRef  } from 'react'
 import { styled } from 'styled-components';
-import {sr, srConfig} from '@utility';
+import {srConfig} from '@utility';
 
 
 
@@ -272,24 +272,6 @@ const StyledBackground = styled.div`
 
 export const Offres = () => {
 
-  const revealTitle = useRef<HTMLHeadingElement | null>(null);
-  const revealProjects = useRef<(HTMLLIElement | null)[]>([]);
-
-  useEffect(() => {
-
-    if (sr && revealTitle.current) {
-      sr.reveal(revealTitle.current, srConfig());
-  
-      revealProjects.current.forEach((ref:  HTMLLIElement | null, i) => {
-        if (sr && ref) {
-          sr.reveal(ref, srConfig(i * 120));
-        }
-      });
-    }
-  }, []);
-  
-  
-
     const kitsData = [
         {
           title: "Kit 'Politique RH'",
@@ -326,17 +308,13 @@ export const Offres = () => {
         }
       ];
       
-     
-
-     
-      
-      
+  
       
   return (
     <StyledOfferSection>
     <div className="overlay-wrapper">
       <div className="center">
-        <h1 className="section-heading" ref={revealTitle}>
+        <h1 className="section-heading">
           Nos Offres RH
         </h1>
         <span className="divider center"></span>
@@ -348,7 +326,6 @@ export const Offres = () => {
         {kitsData.map((item, i) => (
           <StyledOfferBlock
             key={i}
-            ref={(el: HTMLLIElement | null) => (revealProjects.current[i] = el)}
           >
 
                <div className='project-content'>
