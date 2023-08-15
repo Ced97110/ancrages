@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Hero, Featured, Services, Brand } from '@components'
+import { Hero, Featured, ServicesIntro, Brand } from '@components'
 
 
 
@@ -20,7 +20,7 @@ export default function Home() {
       
      <Hero/>
      <Brand/>
-     <Services/>
+     <ServicesIntro/>
      <Featured/>
 
     </>
