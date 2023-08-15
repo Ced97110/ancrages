@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Hero, Featured, ServicesIntro, Brand } from '@sections'
+import { Hero,  ServicesIntro, Brand } from '@sections'
 
 
 
@@ -21,7 +21,7 @@ export default function Home() {
      <Hero/>
      <Brand/>
      <ServicesIntro/>
-     <Featured/>
+  
 
     </>
   )
