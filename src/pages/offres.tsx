@@ -273,13 +273,14 @@ const StyledBackground = styled.div`
 export const Offres = () => {
 
   const revealTitle = useRef<HTMLHeadingElement | null>(null);
-  const revealProjects = useRef<(HTMLDivElement | null)[]>([]);
+  const revealProjects = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
+
     if (sr && revealTitle.current) {
       sr.reveal(revealTitle.current, srConfig());
   
-      revealProjects.current.forEach((ref: HTMLDivElement | null, i) => {
+      revealProjects.current.forEach((ref:  HTMLLIElement | null, i) => {
         if (sr && ref) {
           sr.reveal(ref, srConfig(i * 120));
         }
@@ -340,14 +341,14 @@ export const Offres = () => {
         </h1>
         <span className="divider center"></span>
         <p className="experience-description">
-          {/* ... */}
+          Notre expérience de manager de collaborateurs RH notamment dans des périodes de transition, nous permet de proposer un accompagnement sur mesure aux équipes RH. Nous proposons ainsi des kits dans les domaines suivants
         </p>
       </div>
       <StyledOffer>
         {kitsData.map((item, i) => (
           <StyledOfferBlock
             key={i}
-            ref={el => (revealProjects.current[i] = el)}
+            ref={(el: HTMLLIElement | null) => (revealProjects.current[i] = el)}
           >
 
                <div className='project-content'>
