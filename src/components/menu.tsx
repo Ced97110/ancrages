@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { navLinks } from '@config';
+import { navLinks } from '../utility/config';
 import { useOnClickOutside } from '@hooks';
 
 interface StyledLoaderProps {

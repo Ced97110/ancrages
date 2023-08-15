@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import styled from 'styled-components';
 
-import { srConfig } from '@config';
+import { srConfig } from '../utility/config';
 import Image from 'next/image';
 import { usePrefersReducedMotion } from '@hooks';
 

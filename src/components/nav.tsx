@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
-import { navLinks } from '@config';
+import { navLinks } from '../utility/config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu } from '@components';

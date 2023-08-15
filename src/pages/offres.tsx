@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef  } from 'react'
 import { styled } from 'styled-components';
-import Image from 'next/image';
+import {sr, srConfig} from '@utility';
+
 
 
 
@@ -175,61 +176,61 @@ const StyledOfferBlock = styled.li`
     @media (max-width: 768px) {
        display: none;
     }
-  }
 
-  .timeline-img {
-          position: absolute;
-          width: 100px;
-          height: 100px;
-          top: 15px;
-          left: 50%;
-          margin-left: -25px;
-          border-radius: 50%;
-          background: #212121;
-          transform: translateZ(0);
-          backface-visibility: hidden;
-          transition: all 0.3s ease;
-          @include MQ(ML) {
-            top: 5px;
-            left: 20px;
-          }
-          @include MQ(SM) {
-            width: 40px;
-            height: 40px;
-            top: 10px;
-            left: 15px;
-          }
-          .sprite {
-            display: block;
-            width: 24px;
-            height: 24px;
-            position: relative;
+    .timeline-img {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 15px;
             left: 50%;
-            top: 50%;
-            margin-left: -12px;
-            margin-top: -12px;
-            background-repeat: no-repeat;
-            background-size: 100%;
+            margin-left: -25px;
+            border-radius: 50%;
+            background: #212121;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            transition: all 0.3s ease;
+            @include MQ(ML) {
+              top: 5px;
+              left: 20px;
+            }
             @include MQ(SM) {
-              width: 20px;
-              height: 20px;
-              margin-left: -10px;
-              margin-top: -10px;
+              width: 40px;
+              height: 40px;
+              top: 10px;
+              left: 15px;
             }
-            &.settings {
-              background-image: url('./icons/settings.png');
-            }
-            &.research {
-              background-image: url('./icons/search.png');
-            }
-            &.industry {
-              background-image: url('./icons/briefcase.png');
-            }
-            &.academic {
-              background-image: url('./icons/notebook.png');
-            }
-          }
+            .sprite {
+              display: block;
+              width: 24px;
+              height: 24px;
+              position: relative;
+              left: 50%;
+              top: 50%;
+              margin-left: -12px;
+              margin-top: -12px;
+              background-repeat: no-repeat;
+              background-size: 100%;
+              @include MQ(SM) {
+                width: 20px;
+                height: 20px;
+                margin-left: -10px;
+                margin-top: -10px;
+              }
+              &.settings {
+                background-image: url('./icons/settings.png');
+              }
+              &.research {
+                background-image: url('./icons/search.png');
+              }
+              &.industry {
+                background-image: url('./icons/briefcase.png');
+              }
+              &.academic {
+                background-image: url('./icons/notebook.png');
+              }
+           }
         }
+      }
 
 `;
 
@@ -271,6 +272,23 @@ const StyledBackground = styled.div`
 
 export const Offres = () => {
 
+  const revealTitle = useRef<HTMLHeadingElement | null>(null);
+  const revealProjects = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    if (sr && revealTitle.current) {
+      sr.reveal(revealTitle.current, srConfig());
+  
+      revealProjects.current.forEach((ref: HTMLDivElement | null, i) => {
+        if (sr && ref) {
+          sr.reveal(ref, srConfig(i * 120));
+        }
+      });
+    }
+  }, []);
+  
+  
+
     const kitsData = [
         {
           title: "Kit 'Politique RH'",
@@ -307,21 +325,30 @@ export const Offres = () => {
         }
       ];
       
+     
 
+     
+      
+      
       
   return (
     <StyledOfferSection>
-     
-      
-         <div className="overlay-wrapper">
-           <div className='center'>
-              <h1 className="section-heading">Nos Offres RH</h1>
-              <span className="divider center"></span>
-              <p className="experience-description">Notre expérience de manager de collaborateurs RH notamment dans des périodes de transition, nous permet de proposer un accompagnement sur mesure aux équipes RH. Nous proposons ainsi des kits dans les domaines suivants:</p>
-           </div>
-           <StyledOffer>
-            {kitsData.map((item,i) => (
-             <StyledOfferBlock key={i}>
+    <div className="overlay-wrapper">
+      <div className="center">
+        <h1 className="section-heading" ref={revealTitle}>
+          Nos Offres RH
+        </h1>
+        <span className="divider center"></span>
+        <p className="experience-description">
+          {/* ... */}
+        </p>
+      </div>
+      <StyledOffer>
+        {kitsData.map((item, i) => (
+          <StyledOfferBlock
+            key={i}
+            ref={el => (revealProjects.current[i] = el)}
+          >
 
                <div className='project-content'>
                  <h3 className="position">{item.title}</h3>
@@ -337,17 +364,11 @@ export const Offres = () => {
                       <div className={`sprite ${item.sprite}`}></div>
                   </div>
                </div>
-
-               
-               
-
-
           </StyledOfferBlock>
-
-            ))}
-           </StyledOffer>
-         </div>
-    </StyledOfferSection>
+        ))}
+      </StyledOffer>
+    </div>
+  </StyledOfferSection>
   )
 }
 

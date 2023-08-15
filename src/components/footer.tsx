@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { srConfig, email } from '@config';
+import { srConfig, email } from '../utility/config';
 import { usePrefersReducedMotion } from '@hooks';
 import Image from 'next/image';
-import { navLinks } from '@config';
+import { navLinks } from '../utility/config';
 import Link from 'next/link';
-import { socialMedia } from '@config';
+import { socialMedia } from '../utility/config';
 import { Icon } from '@icons';
 
 const StyledFooter = styled.footer`
