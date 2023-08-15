@@ -58,7 +58,11 @@ const StyledOfferSection = styled.section`
 
 
 const StyledOffer = styled.ul`
-  padding: 30px;
+    padding-left: 0;
+    a {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 
@@ -68,8 +72,11 @@ const StyledOfferBlock = styled.li`
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
+  align-items: center;
  
-
+  @media (max-width: 768px) {
+    ${({ theme }) => theme.mixins.boxShadow};
+  }
    
 
   &:not(:last-of-type) {
@@ -125,7 +132,7 @@ const StyledOfferBlock = styled.li`
 
   .project-content {
     position: relative;
-    grid-column: 1 / 6;
+    grid-column: 1 / 7;
     background-color: #212121;
     border-radius: var(--border-radius);
     margin-left: 0;
@@ -166,9 +173,7 @@ const StyledOfferBlock = styled.li`
     z-index: 1;
 
     @media (max-width: 768px) {
-      grid-column: 1 / -1;
-      height: 100%;
-      opacity: 0.25;
+       display: none;
     }
   }
 
