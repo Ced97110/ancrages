@@ -22,7 +22,7 @@ export default function Home() {
      <Hero/>
      <Brand/>
      <ServicesIntro/>
-     <Featured/>
+     <Features/>
   
 
     </>
