@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Hero } from '@components'
-import Brand from '../components/sections/Brand'
-import Services from '../components/sections/services'
-import Featured from '../components/sections/Featured'
+import { Hero, Featured, Services, Brand } from '@components'
+
+
 
 
 

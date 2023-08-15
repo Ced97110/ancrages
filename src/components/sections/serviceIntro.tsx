@@ -277,7 +277,7 @@ const StyledProject = styled.li`
   }
 `;
 
-const Featured = () => {
+const ServicesIntro = () => {
   
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
@@ -359,4 +359,4 @@ const data = [
   );
 };
 
-export default Featured;
+export default ServicesIntro;

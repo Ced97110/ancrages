@@ -1,5 +1,5 @@
 import React, { ReactNode,useEffect,useState } from 'react';
-import {keyframes, styled} from 'styled-components';
+import {styled} from 'styled-components';
 
 
 const ServicesSection = styled.section`
