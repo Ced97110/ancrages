@@ -138,6 +138,7 @@ const StyledContact = styled.section`
  const Contact = () => {
   return (
     <StyledContact>
+      <div className='bg' ></div>
        <div className='section-wrapper'>
         <div className="fade-in">
           <div className="center">

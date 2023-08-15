@@ -13,10 +13,8 @@ const StyledHeroSection = styled.section<{theme: DefaultTheme}>`
   height: 100vh;
   padding: 0;
   text-align: center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('/hero.jpg');
+  
+ 
    
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
@@ -91,25 +89,27 @@ const Hero: React.FC = () => {
 
 
   return (
-    <StyledHeroSection>
-    
-      {prefersReducedMotion ? (
-      <>
-        {items.map((item, i) => (
-          <div key={i}>{item}</div>
-        ))}
-      </>
-    ) : (
-      <TransitionGroup component={null}>
-        {isMounted &&
-          items.map((item, i) => (
-            <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-              <div style={{ transitionDelay: `${i + 1}30ms` }}>{item}</div>
-            </CSSTransition>
-          ))}
-      </TransitionGroup>
-    )}
-   
+    <StyledHeroSection id='hero-section'>
+      <div className='bg' >
+        <div className='overlay-wrapper'>
+          {prefersReducedMotion ? (
+          <>
+            {items.map((item, i) => (
+              <div key={i}>{item}</div>
+            ))}
+          </>
+        ) : (
+          <TransitionGroup component={null}>
+            {isMounted &&
+              items.map((item, i) => (
+                <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                  <div style={{ transitionDelay: `${i + 1}30ms` }}>{item}</div>
+                </CSSTransition>
+              ))}
+          </TransitionGroup>
+        )}
+     </div>
+    </div>
   </StyledHeroSection>
   );
 };

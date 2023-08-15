@@ -126,7 +126,7 @@ const StyledOfferBlock = styled.li`
   .project-content {
     position: relative;
     grid-column: 1 / 6;
-    background: #1b1b1b;
+    background-color: #212121;
     border-radius: var(--border-radius);
     margin-left: 0;
     padding: 1.5em;
@@ -160,7 +160,6 @@ const StyledOfferBlock = styled.li`
 
 
   .project-image {
-    ${({ theme }) => theme.mixins.boxShadow};
     grid-column: 6 / -1;
     grid-row: 1 / -1;
     position: relative;

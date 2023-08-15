@@ -477,7 +477,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
      
-  #bg {
+  .bg {
         width: 100vw;
         height: 100%;
         min-height: 100%;
@@ -489,23 +489,8 @@ const GlobalStyle = createGlobalStyle`
         overflow: hidden;
         object-fit:'cover';
         left:0;
-
-        background-image: url('./public/services-xl.jpg');
-        
-        @media ${props => props.theme.bp.SM} {
-        background-image: url('./services-lg.jpg');
-        }
-        @media ${props => props.theme.bp.SM} { 
-        background-image: url('./services-md.jpg');
-        }
-        @media ${props => props.theme.bp.S660} {
-        background-image: url('./services-sm.jpg');
-        }
-        @media ${props => props.theme.bp.SM} {
-        background-image: url('./services-xs.jpg');
-         }
   
-       }
+      }
 
   .breadcrumb {
     display: flex;
@@ -529,6 +514,24 @@ const GlobalStyle = createGlobalStyle`
       letter-spacing: 0.1em;
     }
   }
+
+
+
+  #hero-section .bg {
+    background-image: url('./hero.jpg');
+    @include MQ(L) {
+      background-image: url('/hero.jpg');
+    }
+    @include MQ(MM) {
+      background-image: url('./hero.jpg');
+    }
+    @include MQ(S660) {
+      background-image: url('./hero.jpg');
+    }
+    @include MQ(SM) {
+      background-image: url('./hero.jpg');
+  }
+}
 
   
   ${TransitionStyles};
