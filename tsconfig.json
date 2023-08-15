@@ -22,8 +22,8 @@
       "@fonts": ["./src/fonts/*"],
       "@config": ["./src/config"],
       "@icons": ["./src/icons"],
-      "@utility": ["./src/utility"]
-      
+      "@utility": ["./src/utility"],
+      "@sections":["./src/sections"]
     }
     
   },

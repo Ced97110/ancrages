@@ -61,12 +61,11 @@ const StyledAbout = styled.section`
       }
     }
     .headshot {
-      display: inline-block;
       width: 35%;
       height: auto;
+      float: right;
       border-radius: 50%;
       margin-top: -100px;
-      float: right;
       max-width: 300px;
       @media (max-width: 1000px) {
         margin-top: 0px;

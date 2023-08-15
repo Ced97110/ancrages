@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Hero, Featured, ServicesIntro, Brand } from '@components'
+import { Hero, Featured, ServicesIntro, Brand } from '@sections'
 
 
 
