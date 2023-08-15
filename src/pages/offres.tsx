@@ -309,7 +309,7 @@ export const Offres = () => {
       
   return (
     <StyledOfferSection>
-      <Image src="/root.jpg" className='bg' fill={true}  alt="tree shot" />
+      <Image src="/root.jpg" className='bg' fill={true} priority={false} alt="tree shot" />
       
          <div className="overlay-wrapper">
            <div className='center'>

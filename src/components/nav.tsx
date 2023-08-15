@@ -179,7 +179,7 @@ const Nav = ({ isHome } : NavProps) => {
       {isHome ? (
         <Link href="/" aria-label="home">
           <div className="logo-container">
-            <Image src='/logo.png' quality={90} width={70} height={70}  alt='logo-home' />
+            <Image src='/logo.png' quality={80} width={70} height={70}  priority={true} sizes="(max-width: 480px) 40px" alt='logo-home' />
           </div>
         </Link>
       ) : (

@@ -118,6 +118,7 @@ const StyledAbout = styled.section`
             <Image
                 src="/murielle.jpg"
                 alt="Headshot"
+                priority={false}
                 className="headshot"
                 width={320}
                 height={320} // Adjust the height as needed
