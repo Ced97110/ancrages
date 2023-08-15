@@ -2,19 +2,23 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 const StyledContact = styled.section`
-    margin: 0 auto;
-    max-width: 500px;
-    padding-top:150px;
-    @media (max-width: 768px) {
-      padding: 0;
-    }
+   
+
+   .contact-description {
+      margin: 0 auto;
+      max-width: 440px;
+      @media (max-width: 1170px) {
+        padding: 0;
+      }
+   }
+    
   
   .form-wrapper {
     width: 500px;
     margin: 20px auto;
     padding: 0;
-    @media (max-width: 768px) {
-      padding: 0;
+    @media (max-width: 600px) {
+      width: 90%;
     }
     @media (max-width: 480px) {
       padding: 0;
@@ -27,7 +31,7 @@ const StyledContact = styled.section`
       @media (max-width: 768px) {
       margin-bottom: 10px;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 480px) {
       margin-bottom: 10px;
     }
      
@@ -113,16 +117,16 @@ const StyledContact = styled.section`
       line-height: 1.5;
       padding: 12px 20px 10px;
       margin: 70px auto 0;
-      color: var(--navy);
+      color: var(--yellow);
       background: transparent;
-      border: 2px solid var(--navy);
+      border: 2px solid var(--yellow);
       border-radius: 3px;
       position: relative;
       overflow: hidden;
       transition: all 0.3s ease;
       &:hover, &:focus {
-        color: $white;
-        background: $blue;
+        color: var(--dark-mauve);
+        background: var(--yellow);
       }
     }
     #message-label {
@@ -134,7 +138,7 @@ const StyledContact = styled.section`
  const Contact = () => {
   return (
     <StyledContact>
-      <div className="overlay-wrapper">
+       <div className='section-wrapper'>
         <div className="fade-in">
           <div className="center">
             <h1 className="section-heading">Contacter Nous</h1>

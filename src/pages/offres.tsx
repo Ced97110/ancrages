@@ -1,13 +1,11 @@
 import React from 'react'
 import { styled } from 'styled-components';
-import { isTemplateMiddle } from 'typescript';
 import Image from 'next/image';
 
 
 
 const StyledOfferSection = styled.section`
-      padding-top: var(--nav-height);
-    
+     
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
       height: auto;
       padding-top: var(--nav-height);
@@ -309,7 +307,7 @@ export const Offres = () => {
       
   return (
     <StyledOfferSection>
-      <Image src="/root.jpg" className='bg' fill={true} priority={false} alt="tree shot" />
+     
       
          <div className="overlay-wrapper">
            <div className='center'>

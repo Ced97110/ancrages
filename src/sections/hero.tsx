@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useTheme, DefaultTheme } from 'styled-components';
 import Image from 'next/image';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 const StyledHeroSection = styled.section<{theme: DefaultTheme}>`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -12,13 +13,17 @@ const StyledHeroSection = styled.section<{theme: DefaultTheme}>`
   height: 100vh;
   padding: 0;
   text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/hero.jpg');
    
-
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
     padding-top: var(--nav-height);
   }
+
 
   h1 {
     margin: 0 0 30px 4px;
@@ -39,10 +44,6 @@ const StyledHeroSection = styled.section<{theme: DefaultTheme}>`
     line-height: 0.9;
   }
 
-  .overlay-wrapper {
-    display: flex;
-    align-items: center;
-  }
 
   p {
     margin: 20px 0 0;
@@ -62,6 +63,8 @@ const Hero: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
   const videoRef = useRef(null);
   const theme = useTheme();
+  const prefersReducedMotion = usePrefersReducedMotion();
+
 
   useEffect(() => {
     const navDelay = 1000;
@@ -86,31 +89,28 @@ const Hero: React.FC = () => {
    const loaderDelay: number = 2000
  
 
-  const renderBelowTablet = (
-    <>
-    <Image src='/hero.jpg'  quality={85} fill alt='hero-image' sizes="100vw" style={{zIndex:'-1', objectFit:'cover', position:'absolute',filter:'brightness(0.4)'}}/>
-    <div className='wrapper'>
-      <TransitionGroup component={null}>
-          {isMounted && items.map((item,i) => (
-              <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-                <div style={{ transitionDelay: `${i + 1}35ms` }}>{item}</div>
-            </CSSTransition>
-        ))}
-      </TransitionGroup>
-    </div>
-    </>
-  );
 
   return (
     <StyledHeroSection>
-      <div className='overlay-wrapper'>
-        <div className='intro-wrapper'>
-          <div className='intro-body'>
-            {theme.bp.tabletS ? renderBelowTablet : ''}
-          </div>
-        </div>
-      </div>
-    </StyledHeroSection>
+    
+      {prefersReducedMotion ? (
+      <>
+        {items.map((item, i) => (
+          <div key={i}>{item}</div>
+        ))}
+      </>
+    ) : (
+      <TransitionGroup component={null}>
+        {isMounted &&
+          items.map((item, i) => (
+            <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+              <div style={{ transitionDelay: `${i + 1}30ms` }}>{item}</div>
+            </CSSTransition>
+          ))}
+      </TransitionGroup>
+    )}
+   
+  </StyledHeroSection>
   );
 };
 
