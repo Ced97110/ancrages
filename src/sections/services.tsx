@@ -4,7 +4,7 @@ import {styled} from 'styled-components';
 
 const ServicesSection = styled.section`
   height: auto;
-  background: transparent !important;
+  background-color : var(--light-navy);
   min-width: 100%;
   margin:0;
   padding:0;
@@ -237,7 +237,7 @@ const StyledBackground = styled.div`
   overflow: hidden;
   object-fit: cover; // Remove the single quotes
   left: 0;
-  background-image: url('../root.jpg');
+  
   
 `;
 
@@ -256,9 +256,9 @@ const Services = () => {
           text: 'rkkkkkkiiiuuyytreesdfghjklppoiuytrewqascvnmkjhfsdfhiyty.',
         },
         {
-          heading: 'Responsive UI Design',
+          heading: 'fillerrrr',
           sprite: 'ui',
-          text: 'plement responsive and aesthetically pleasing interfaces for websites and apps that adapt to any type of device, platform, or browser.',
+          text: 'fjjjdjhdhddyyetetrtrgghdjduuyttwrfacxbcbnvngkhohopohpgituyrdtwfsfsgsjjdjddjdjddjdkdkddkd',
         },
       ],
     },
@@ -266,12 +266,12 @@ const Services = () => {
       row: 'row2',
       services: [
         {
-          heading: 'Experience Design',
+          heading: 'filler',
           sprite: 'xd',
           text: 'ffffjdfdddggggggjyjyttirurururruryryrttrtrgdgdfdfscsscscadadwewewreretyywuwwrgggggg.',
         },
         {
-          heading: 'Diversity in Tech',
+          heading: 'hellofofofof',
           sprite: 'wit',
           text: 'helookkvjvjvjvjvvnfhyygdddtehshjjdddd.',
         },
@@ -281,8 +281,7 @@ const Services = () => {
 
     return (
         <ServicesSection id='services'>
-            <StyledBackground/>
-            <div className="overlay-wrapper">
+            <div className="section-wrapper">
               <div className="fade-in">
                <h1>Pourquoi Nous Choisir ?</h1>
                <span className="divider"></span>

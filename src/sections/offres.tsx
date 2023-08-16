@@ -7,10 +7,7 @@ import {srConfig} from '@utility';
 
 const StyledOfferSection = styled.section`
      
-  @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
-      height: auto;
-      padding-top: var(--nav-height);
-    }
+ 
 
    .experience-description {
     padding: 0 100px;

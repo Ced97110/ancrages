@@ -534,6 +534,12 @@ const GlobalStyle = createGlobalStyle`
   }
 }
 
+
+#contact .bg {
+  background-image: url('./root.jpg');
+  filter: brightness(0.2);
+}
+
   
   ${TransitionStyles};
 

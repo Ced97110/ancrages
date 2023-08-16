@@ -304,7 +304,7 @@ const data = [
         title : "Expertise",
         description : `Grace à notre solide expérience en ressources humaines, et par le biais de notre regard extérieur,
                         nous vous aiderons à identifier ce qui doit être revu et mis en place au sein de votre structure.`,
-        image: "/hero.jpg"                
+        image: "/ladies.jpg"                
     },
 
 ]
@@ -339,7 +339,7 @@ const data = [
 
                   <div className="project-image">
                     <a>
-                      <Image src='/hero.jpg'  quality={91} width={450} height={450} alt='hero-image' className='img'/>
+                      <Image src={url.image}  quality={91} width={450} height={450} alt='hero-image' className='img'/>
                     </a>
                   </div>
                 </StyledProject>
