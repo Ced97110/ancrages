@@ -61,18 +61,18 @@ const mixins = {
   inlineLink: css`
     display: inline-block;
     position: relative;
-    color: var(--green);
+    color: var(--yellow);
     transition: var(--transition);
 
     &:hover,
     &:focus-visible {
-      color: var(--green);
+      color: var(--yellow);
       outline: 0;
       &:after {
         width: 100%;
       }
       & > * {
-        color: var(--green) !important;
+        color: var(--yellow) !important;
         transition: var(--transition);
       }
     }
@@ -83,7 +83,7 @@ const mixins = {
       height: 1px;
       position: relative;
       bottom: 0.37em;
-      background-color: var(--green);
+      background-color: var(--yellow);
       opacity: 0.5;
       @media (prefers-reduced-motion: no-preference) {
         transition: var(--transition);

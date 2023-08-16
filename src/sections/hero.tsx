@@ -14,8 +14,10 @@ const StyledHeroSection = styled.section<{theme: DefaultTheme}>`
   padding: 0;
   text-align: center;
   
+  .overlay-wrapper{
+    padding-top: 200px;
+  }
  
-   
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
@@ -42,6 +44,62 @@ const StyledHeroSection = styled.section<{theme: DefaultTheme}>`
     line-height: 0.9;
   }
 
+
+  .scroll-down-wrapper {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+
+       .scroll-down {
+          display: block;
+          width: 70px;
+          margin: 0 auto;
+          transition: all 0.3s ease;
+
+          &:hover, &:focus {
+            transition: all 0.3s ease;
+             .logo {
+              opacity: 0;
+            }
+            .scroll-down-text {
+              opacity: 1;
+              visibility: visible;
+            }
+            
+          }
+          .logo {
+            width: 35px;
+            transition: opacity 0.5s ease, visibility 0.5s;
+          }
+          .scroll-down-text {
+            color: white;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            height: 100%;
+            opacity: 0;
+            padding-top: 0.5em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: opacity 0.5s ease, visibility 0.5s;
+            visibility: hidden;
+            width: 100%;
+            .chevron {
+              transform: rotate(90deg);
+              height: 20px;
+              display: block;
+              margin: 10px auto;
+            }
+          }
+        }
+      } 
 
   p {
     margin: 20px 0 0;
@@ -108,6 +166,17 @@ const Hero = () => {
               ))}
           </TransitionGroup>
         )}
+         <div className="scroll-down-wrapper">
+           <a title="About section" className="scroll-down">
+              <span className="scroll-down-text">
+                En Savoir plus
+                <svg className="chevron" viewBox="0 0 57.942 105.958" enable-background="new 0 0 11.893 6.503">
+                  <line fill="none" stroke="#fff" stroke-width="7" stroke-miterlimit="10" x1="2.475" y1="2.475" x2="55.467" y2="55.466" />
+                  <line fill="none" stroke="#fff" stroke-width="7" stroke-miterlimit="10" x1="55.467" y1="50.492" x2="2.475" y2="103.484" />
+                </svg>
+              </span>
+           </a>
+        </div>
      </div>
     </div>
   </StyledHeroSection>

@@ -160,7 +160,7 @@ const GlobalStyle = createGlobalStyle`
       padding: 100px;
       
       @media only screen and (max-width:900px) {
-        padding:100px 50px
+        padding:150px 50px
       }
     
   
@@ -417,7 +417,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      background-color: var(--green);
+      background-color: var(--yellow);
       color: var(--navy);
       top: 0;
       left: 0;
@@ -431,7 +431,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #logo {
-    color: var(--green);
+    color: var(--yellow);
   }
 
   .overline {
@@ -517,8 +517,9 @@ const GlobalStyle = createGlobalStyle`
 
 
 
-  #hero-section .bg {
+  #hero .bg {
     background-image: url('./hero.jpg');
+
     @include MQ(L) {
       background-image: url('/hero.jpg');
     }
